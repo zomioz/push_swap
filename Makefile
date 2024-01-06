@@ -12,12 +12,14 @@
 
 NAME = Push_swap
 
-SOURCES = main.c \
-			ft_checker.c \
-			ft_checker_bis.c \
-			ft_cutting.c \
-			ft_stack.c \
-			ft_stackclear.c
+SOURCES = sources/main.c \
+			sources/ft_checker.c \
+			sources/ft_checker_bis.c \
+			sources/ft_cutting.c \
+			sources/ft_stack.c \
+			sources/ft_stackclear.c \
+			Operations/ft_swap.c \
+			Operations/ft_push.c
 
 CFLAGS = -Wall \
 			-Werror \
