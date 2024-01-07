@@ -6,7 +6,7 @@
 /*   By: pirulenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 09:30:11 by pirulenc          #+#    #+#             */
-/*   Updated: 2024/01/07 09:42:28 by pirulenc         ###   ########.fr       */
+/*   Updated: 2024/01/07 11:04:18 by pirulenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,22 @@ void	ft_init_stack_b(t_stack **stack_a) //init b et lance la fonction de tri + t
 	if (!stack_b)
 		return ;
 	*stack_b = NULL; //SUITE DU PROG APRES CETTE LIGNE OU TEST AVEC OPERATIONS
+	ft_printf("print inital de stack_a\n");
+	ft_printf_stack(stack_a, stack_b);
+	ft_push_b(stack_a, stack_b);
+	ft_push_b(stack_a, stack_b);
+	ft_push_b(stack_a, stack_b);
+	ft_printf("\nprintf stack_a push dans stack_b\n");
+	ft_printf_stack(stack_a, stack_b);
+	ft_swap_both(stack_a, stack_b);
+	ft_printf("\nprintf 2first elem swap\n");
+	ft_printf_stack(stack_a, stack_b);
+	ft_rotate_both(stack_a, stack_b);
+	ft_printf("\nprintf 1ft become the last\n");
+	ft_printf_stack(stack_a, stack_b);
+	ft_reverse_both(stack_a, stack_b);
+	ft_printf("\nprintf last become the first\n");
+	ft_printf_stack(stack_a, stack_b);
 	ft_stackclear(stack_b);
 	free(stack_b);
 }
@@ -68,7 +84,8 @@ void	ft_cutting(char **spl) //mets spl dans stack a
 		ft_stackadd_back(stack_a, ft_stacknew(ft_atoi(spl[x])));
 		x++;
 	}
-	ft_init_stack_b(stack_a);
+	if (ft_check_stack_sort(stack_a) == 1)
+		ft_init_stack_b(stack_a);
 	ft_stackclear(stack_a);
 	free(stack_a);
 }

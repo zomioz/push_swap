@@ -6,7 +6,7 @@
 /*   By: pirulenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 07:54:25 by pirulenc          #+#    #+#             */
-/*   Updated: 2024/01/06 12:49:34 by pirulenc         ###   ########.fr       */
+/*   Updated: 2024/01/07 11:15:41 by pirulenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int	ft_start_checker(char **spl)
 {
 	if (ft_checker(spl) == 0)
 	{
-		ft_printf("INPUT ERROR");
+		ft_printf("Error\n");
 		return (0);
 	}
 	return (1);

@@ -43,4 +43,6 @@ void	ft_rotate_both(t_stack **stack_a, t_stack **stack_b);
 void	ft_reverse_a(t_stack **stack_a);
 void	ft_reverse_b(t_stack **stack_b);
 void	ft_reverse_both(t_stack **stack_a, t_stack **stack_b);
+int	ft_check_stack_sort(t_stack **stack_a);
+
 #endif
