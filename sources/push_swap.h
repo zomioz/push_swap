@@ -37,5 +37,10 @@ void	ft_swap_b(t_stack **stack_b);
 void	ft_swap_both(t_stack **stack_a, t_stack **stack_b);
 void	ft_push_b(t_stack **stack_a, t_stack **stack_b);
 void	ft_push_a(t_stack **stack_a, t_stack **stack_b);
-
+void	ft_rotate_a(t_stack **stack_a);
+void	ft_rotate_b(t_stack **stack_b);
+void	ft_rotate_both(t_stack **stack_a, t_stack **stack_b);
+void	ft_reverse_a(t_stack **stack_a);
+void	ft_reverse_b(t_stack **stack_b);
+void	ft_reverse_both(t_stack **stack_a, t_stack **stack_b);
 #endif

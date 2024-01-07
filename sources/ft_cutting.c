@@ -6,7 +6,7 @@
 /*   By: pirulenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 09:30:11 by pirulenc          #+#    #+#             */
-/*   Updated: 2024/01/06 16:28:07 by pirulenc         ###   ########.fr       */
+/*   Updated: 2024/01/07 09:42:28 by pirulenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,7 @@ void	ft_init_stack_b(t_stack **stack_a) //init b et lance la fonction de tri + t
 	stack_b = malloc(sizeof(t_stack*));
 	if (!stack_b)
 		return ;
-	*stack_b = NULL;
-	ft_printf_stack(stack_a, stack_b);
-	ft_printf("\n");
-	ft_push_b(stack_a, stack_b);
-	ft_push_b(stack_a, stack_b);
-	ft_printf_stack(stack_a, stack_b);
+	*stack_b = NULL; //SUITE DU PROG APRES CETTE LIGNE OU TEST AVEC OPERATIONS
 	ft_stackclear(stack_b);
 	free(stack_b);
 }
