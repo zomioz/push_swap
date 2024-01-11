@@ -22,6 +22,7 @@ void	ft_push_a(t_stack **stack_a, t_stack **stack_b)
 		*stack_b = (*stack_b)->next;
 		ft_stackadd_front(stack_a, current);
 	}
+	ft_printf("pa\n");
 }
 void	ft_push_b(t_stack **stack_a, t_stack **stack_b)
 {
@@ -33,4 +34,5 @@ void	ft_push_b(t_stack **stack_a, t_stack **stack_b)
 		*stack_a = (*stack_a)->next;
 		ft_stackadd_front(stack_b, current);
 	}
+	ft_printf("pb\n");
 }

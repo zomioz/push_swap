@@ -32,17 +32,23 @@ void	ft_stackadd_back(t_stack **lst, t_stack *new);
 t_stack	*ft_stacknew(int content);
 void	ft_stackclear(t_stack **lst);
 void	ft_stackdelone(t_stack *lst);
-void	ft_swap_a(t_stack **stack_a);
-void	ft_swap_b(t_stack **stack_b);
+void	ft_swap_a(t_stack **stack_a, int x);
+void	ft_swap_b(t_stack **stack_b, int x);
 void	ft_swap_both(t_stack **stack_a, t_stack **stack_b);
 void	ft_push_b(t_stack **stack_a, t_stack **stack_b);
 void	ft_push_a(t_stack **stack_a, t_stack **stack_b);
-void	ft_rotate_a(t_stack **stack_a);
-void	ft_rotate_b(t_stack **stack_b);
+void	ft_rotate_a(t_stack **stack_a, int x);
+void	ft_rotate_b(t_stack **stack_b, int x);
 void	ft_rotate_both(t_stack **stack_a, t_stack **stack_b);
-void	ft_reverse_a(t_stack **stack_a);
-void	ft_reverse_b(t_stack **stack_b);
+void	ft_reverse_a(t_stack **stack_a, int x);
+void	ft_reverse_b(t_stack **stack_b, int x);
 void	ft_reverse_both(t_stack **stack_a, t_stack **stack_b);
 int	ft_check_stack_sort(t_stack **stack_a);
+int	ft_stack_count(t_stack *lst);
+int	ft_stackfind_pos(t_stack *lst, int content);
+void	ft_cut_three(t_stack **stack_a, t_stack **stack_b);
+void	ft_go_algo(t_stack **stack_a, t_stack **stack_b);
+
+void	ft_printf_stack(t_stack **stack_a, t_stack **stack_b);
 
 #endif

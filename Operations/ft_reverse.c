@@ -23,7 +23,7 @@ static t_stack	*ft_stack_prevlast(t_stack *stack)
 	return (stack);
 }
 
-void	ft_reverse_a(t_stack **stack_a)
+void	ft_reverse_a(t_stack **stack_a, int x)
 {
 	if ((*stack_a)->next == NULL)
 		return ;
@@ -35,9 +35,11 @@ void	ft_reverse_a(t_stack **stack_a)
 	last->next = *stack_a;
 	tail->next = NULL;
 	*stack_a = last;
+	if (x == 1)
+		ft_printf("rra\n");
 }
 
-void	ft_reverse_b(t_stack **stack_b)
+void	ft_reverse_b(t_stack **stack_b, int x)
 {
 	if ((*stack_b)->next == NULL)
 		return ;
@@ -49,10 +51,13 @@ void	ft_reverse_b(t_stack **stack_b)
 	last->next = *stack_b;
 	tail->next = NULL;
 	*stack_b = last;
+	if (x == 1)
+		ft_printf("rrb\n");
 }
 
 void	ft_reverse_both(t_stack **stack_a, t_stack **stack_b)
 {
-	ft_reverse_a(stack_a);
-	ft_reverse_b(stack_b);
+	ft_reverse_a(stack_a, 0);
+	ft_reverse_b(stack_b, 0);
+	ft_printf("rrr\n");
 }
