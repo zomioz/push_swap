@@ -21,14 +21,13 @@ void	ft_go_algo(t_stack **stack_a, t_stack **stack_b)
 	while ((*stack_b))
 	{
 		pos = ft_stackfind_pos((*stack_a), (*stack_b)->content);
-		ft_printf("find pos %d\n", pos);
 		if ((*stack_b)->content < (*stack_a)->content)
 			ft_push_a(stack_a, stack_b);
 		else
 		{
 			pos_save = pos;
-			count = ft_stack_count((*stack_a)) / 2;
-			if (pos_save <= (ft_stack_count((*stack_a)) / 2))
+			count = ft_stack_count((*stack_a));
+			if (pos_save <= (count / 2))
 			{
 				while (pos > 0)
 				{
@@ -43,20 +42,19 @@ void	ft_go_algo(t_stack **stack_a, t_stack **stack_b)
 				}
 			}
 			else
-				return ;
-			/*{
-				while (pos > 0)
+			{
+				while ((count - pos) > 0)
 				{
 					ft_reverse_a(stack_a, 1);
-					pos--;
-				}
-				ft_push_a(stack_a, stack_b);
-				while (pos != pos_save)
-				{
-					ft_rotate_a(stack_a, 1);
 					pos++;
 				}
-			}*/
+				ft_push_a(stack_a, stack_b);
+				while (pos != (pos_save - 1))
+				{
+					ft_rotate_a(stack_a, 1);
+					pos--;
+				}
+			}
 		}
 	}
 }

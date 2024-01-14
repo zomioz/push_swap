@@ -68,7 +68,7 @@ void	ft_cut_three(t_stack **stack_a, t_stack **stack_b)
 	int	nbr;
 
 	nbr = ft_stack_count((*stack_a));
-	ft_printf("nbr = %d\n", nbr);
+	//ft_printf("nbr = %d\n", nbr);
 	if (nbr > 3)
 	{
 		while (nbr > 3)
@@ -80,14 +80,16 @@ void	ft_cut_three(t_stack **stack_a, t_stack **stack_b)
 	if (nbr == 3)
 	{
 		ft_sort_three(stack_a);
+		//ft_printf_stack(stack_a, stack_b);
+		//ft_printf("\n\n");
 		if (ft_stack_count((*stack_b)) == 0)
 		{
-			ft_printf_stack(stack_a, stack_b);
+			//ft_printf_stack(stack_a, stack_b);
 			return ;
 		}
-		//ft_go_algo(stack_a, stack_b);
+		ft_go_algo(stack_a, stack_b);
 	}
 	if (nbr == 2)
 		ft_sort_two(stack_a);
-	ft_printf_stack(stack_a, stack_b);
+	//ft_printf_stack(stack_a, stack_b);
 }

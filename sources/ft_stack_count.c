@@ -31,14 +31,15 @@ int	ft_stackfind_pos(t_stack *lst, int content)
 {
 	int	x;
 
-	x = 1;
+	x = 0;
 	if (lst == NULL)
 		return (0);
-	while (lst->next != NULL && lst->content < content 
-			&& content < lst->next->content)
+	while (lst->next != NULL && lst->content < content)
 	{
 		lst = lst->next;
 		x++;
 	}
+	if (lst->next == NULL && lst->content < content)
+		return (x + 1);
 	return (x);
 }

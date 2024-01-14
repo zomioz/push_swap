@@ -60,9 +60,7 @@ int	main(int argc, char **argv)
 {
 	char	*tempo;
 	char	**spl;
-	int		x;
 
-	x = 0;
 	tempo = NULL;
 	if (argc < 2)
 		return (0); // future return error

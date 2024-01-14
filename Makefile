@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Push_swap
+NAME = push_swap
 
 SOURCES = sources/main.c \
 			sources/ft_checker.c \
