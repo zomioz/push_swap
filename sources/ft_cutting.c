@@ -49,7 +49,8 @@ void	ft_init_stack_b(t_stack **stack_a) //init b et lance la fonction de tri + t
 	if (!stack_b)
 		return ;
 	*stack_b = NULL; //SUITE DU PROG APRES CETTE LIGNE OU TEST AVEC OPERATIONS
-	ft_cut_three(stack_a, stack_b);
+	ft_swap_it(stack_a, stack_b);
+	//ft_cut_three(stack_a, stack_b);
 	ft_stackclear(stack_b);
 	free(stack_b);
 }

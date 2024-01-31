@@ -24,7 +24,8 @@ SOURCES = sources/main.c \
 			Operations/ft_swap.c \
 			Operations/ft_push.c \
 			Operations/ft_rotate.c \
-			Operations/ft_reverse.c
+			Operations/ft_reverse.c \
+			sources/ft_new_algo.c
 
 CFLAGS = -Wall \
 			-Werror \

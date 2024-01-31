@@ -30,16 +30,16 @@ int	ft_stack_count(t_stack *lst)
 int	ft_stackfind_pos(t_stack *lst, int content)
 {
 	int	x;
-
+	
 	x = 0;
 	if (lst == NULL)
 		return (0);
-	while (lst->next != NULL && lst->content < content)
+	while (lst->next != NULL && lst->content != content)
 	{
 		lst = lst->next;
 		x++;
 	}
-	if (lst->next == NULL && lst->content < content)
+	if (lst->next == NULL && lst->content == content)
 		return (x + 1);
 	return (x);
 }

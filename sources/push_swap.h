@@ -47,7 +47,10 @@ int	ft_check_stack_sort(t_stack **stack_a);
 int	ft_stack_count(t_stack *lst);
 int	ft_stackfind_pos(t_stack *lst, int content);
 void	ft_cut_three(t_stack **stack_a, t_stack **stack_b);
+void	ft_sort_three(t_stack **stack_a);
+void	ft_sort_two(t_stack **stack_a);
 void	ft_go_algo(t_stack **stack_a, t_stack **stack_b);
+void	ft_swap_it(t_stack **stack_a, t_stack **stack_b);
 
 void	ft_printf_stack(t_stack **stack_a, t_stack **stack_b);
 

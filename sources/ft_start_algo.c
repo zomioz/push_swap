@@ -30,7 +30,7 @@ int	ft_check_stack_sort(t_stack **stack_a)
 	return (0);
 }
 
-static void	ft_sort_three(t_stack **stack_a)
+void	ft_sort_three(t_stack **stack_a)
 {
 	if ((*stack_a)->content > (*stack_a)->next->content
 		&& (*stack_a)->content > (*stack_a)->next->next->content) // si 3 en 1er
@@ -57,7 +57,7 @@ static void	ft_sort_three(t_stack **stack_a)
 	}
 }
 
-static void	ft_sort_two(t_stack **stack_a)
+void	ft_sort_two(t_stack **stack_a)
 {
 	if ((*stack_a)->content > (*stack_a)->next->content)
 		ft_swap_a(stack_a, 1);
@@ -91,5 +91,5 @@ void	ft_cut_three(t_stack **stack_a, t_stack **stack_b)
 	}
 	if (nbr == 2)
 		ft_sort_two(stack_a);
-	//ft_printf_stack(stack_a, stack_b);
+	ft_printf_stack(stack_a, stack_b);
 }
