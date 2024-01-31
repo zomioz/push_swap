@@ -6,20 +6,20 @@
 /*   By: pirulenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:30:17 by pirulenc          #+#    #+#             */
-/*   Updated: 2024/01/07 09:02:38 by pirulenc         ###   ########.fr       */
+/*   Updated: 2024/01/31 05:29:32 by pirulenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "../sources/push_swap.h"
+#include "../sources/push_swap.h"
 
 void	ft_rotate_a(t_stack **stack_a, int x)
 {
-	if ((*stack_a)->next == NULL)
-		return ;
-	t_stack *first;
+	t_stack	*first;
 	t_stack	*head;
 	t_stack	*last;
 
+	if ((*stack_a)->next == NULL)
+		return ;
 	first = (*stack_a);
 	head = (*stack_a)->next;
 	last = ft_stacklast((*stack_a));
@@ -32,12 +32,12 @@ void	ft_rotate_a(t_stack **stack_a, int x)
 
 void	ft_rotate_b(t_stack **stack_b, int x)
 {
-	if ((*stack_b)->next == NULL)
-		return ;
-	t_stack *first;
+	t_stack	*first;
 	t_stack	*head;
 	t_stack	*last;
 
+	if ((*stack_b)->next == NULL)
+		return ;
 	first = (*stack_b);
 	head = (*stack_b)->next;
 	last = ft_stacklast((*stack_b));

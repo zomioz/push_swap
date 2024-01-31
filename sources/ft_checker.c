@@ -6,13 +6,13 @@
 /*   By: pirulenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 14:56:08 by pirulenc          #+#    #+#             */
-/*   Updated: 2024/01/06 09:00:11 by pirulenc         ###   ########.fr       */
+/*   Updated: 2024/01/31 05:32:14 by pirulenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ft_trim_more(char **str, int x) //enleve les "+" au debut de **str
+static void	ft_trim_more(char **str, int x)
 {
 	char	*temp;
 
@@ -23,7 +23,7 @@ static void	ft_trim_more(char **str, int x) //enleve les "+" au debut de **str
 	free(temp);
 }
 
-static int	ft_checker_overflow(char **tempo, char **str) //verifie que l'on ai le meme chiffre apres un atoi + itoa, evite les overflow de int
+static int	ft_checker_overflow(char **tempo, char **str)
 {
 	int		x;
 	size_t	y;
@@ -57,7 +57,7 @@ static void	ft_free_all(int *tab, char **tempo)
 	free(tab);
 }
 
-static int	ft_checker_int(char **str) //decoupe le **str en tab de int & en copie de **str
+static int	ft_checker_int(char **str)
 {
 	int		nbr;
 	int		*tab;
@@ -86,7 +86,7 @@ static int	ft_checker_int(char **str) //decoupe le **str en tab de int & en copi
 	return (1);
 }
 
-int	ft_checker(char **str) //verifie que ce soit des digits avec 1 seul + ou -
+int	ft_checker(char **str)
 {
 	int		x;
 	size_t	y;

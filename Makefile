@@ -18,14 +18,14 @@ SOURCES = sources/main.c \
 			sources/ft_cutting.c \
 			sources/ft_stack.c \
 			sources/ft_stackclear.c \
-			sources/ft_start_algo.c \
+			sources/ft_start_sort.c \
 			sources/ft_stack_count.c \
 			sources/ft_algo.c \
+			sources/ft_start_algo.c \
 			Operations/ft_swap.c \
 			Operations/ft_push.c \
 			Operations/ft_rotate.c \
-			Operations/ft_reverse.c \
-			sources/ft_new_algo.c
+			Operations/ft_reverse.c
 
 CFLAGS = -Wall \
 			-Werror \

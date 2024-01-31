@@ -6,7 +6,7 @@
 /*   By: pirulenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 09:04:06 by pirulenc          #+#    #+#             */
-/*   Updated: 2024/01/07 09:39:15 by pirulenc         ###   ########.fr       */
+/*   Updated: 2024/01/31 05:31:58 by pirulenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ static t_stack	*ft_stack_prevlast(t_stack *stack)
 
 void	ft_reverse_a(t_stack **stack_a, int x)
 {
+	t_stack	*last;
+	t_stack	*tail;
+
 	if ((*stack_a)->next == NULL)
 		return ;
-	t_stack	*last;
-	t_stack *tail;
-
 	last = ft_stacklast(*stack_a);
 	tail = ft_stack_prevlast(*stack_a);
 	last->next = *stack_a;
@@ -41,11 +41,11 @@ void	ft_reverse_a(t_stack **stack_a, int x)
 
 void	ft_reverse_b(t_stack **stack_b, int x)
 {
-	if ((*stack_b)->next == NULL)
-		return ;
 	t_stack	*last;
 	t_stack	*tail;
 
+	if ((*stack_b)->next == NULL)
+		return ;
 	last = ft_stacklast(*stack_b);
 	tail = ft_stack_prevlast(*stack_b);
 	last->next = *stack_b;

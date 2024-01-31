@@ -6,16 +6,16 @@
 /*   By: pirulenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 09:30:11 by pirulenc          #+#    #+#             */
-/*   Updated: 2024/01/08 10:09:35 by pirulenc         ###   ########.fr       */
+/*   Updated: 2024/01/31 05:26:08 by pirulenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_printf_stack(t_stack **stack_a, t_stack **stack_b) //a retirer
+void	ft_printf_stack(t_stack **stack_a, t_stack **stack_b)
 {
-	int	x;
-	t_stack *current;
+	int		x;
+	t_stack	*current;
 
 	current = *stack_a;
 	x = 0;
@@ -41,26 +41,25 @@ void	ft_printf_stack(t_stack **stack_a, t_stack **stack_b) //a retirer
 	}
 }
 
-void	ft_init_stack_b(t_stack **stack_a) //init b et lance la fonction de tri + test des operations
+void	ft_init_stack_b(t_stack **stack_a)
 {
-	t_stack **stack_b;
+	t_stack	**stack_b;
 
-	stack_b = malloc(sizeof(t_stack*));
+	stack_b = malloc(sizeof(t_stack *));
 	if (!stack_b)
 		return ;
-	*stack_b = NULL; //SUITE DU PROG APRES CETTE LIGNE OU TEST AVEC OPERATIONS
+	*stack_b = NULL;
 	ft_swap_it(stack_a, stack_b);
-	//ft_cut_three(stack_a, stack_b);
 	ft_stackclear(stack_b);
 	free(stack_b);
 }
 
-void	ft_cutting(char **spl) //mets spl dans stack a
+void	ft_cutting(char **spl)
 {
 	t_stack	**stack_a;
 	int		x;
 
-	stack_a = malloc(sizeof(t_stack*));
+	stack_a = malloc(sizeof(t_stack *));
 	if (!stack_a)
 		return ;
 	*stack_a = NULL;

@@ -6,13 +6,13 @@
 /*   By: pirulenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 07:54:25 by pirulenc          #+#    #+#             */
-/*   Updated: 2024/01/07 11:15:41 by pirulenc         ###   ########.fr       */
+/*   Updated: 2024/01/31 05:02:54 by pirulenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static char	*ft_join_all(int argc, char **argv) //mets les argv dans une chaine avec des " "
+static char	*ft_join_all(int argc, char **argv)
 {
 	int		x;
 	char	*tempo;
@@ -63,13 +63,16 @@ int	main(int argc, char **argv)
 
 	tempo = NULL;
 	if (argc < 2)
-		return (0); // future return error
+	{
+		ft_printf("error\n");
+		return (0);
+	}
 	if (argc > 2)
-		tempo = ft_join_all(argc, argv); //tt mettre dans un chaine
+		tempo = ft_join_all(argc, argv);
 	else
-		tempo = ft_strjoin_free(tempo, argv[1]); //tt mettre dans une chaine
-	spl = ft_split(tempo, ' '); //puis split cette chaine en **str
-	if (ft_start_checker(spl) == 1) // call des checker en chaine
+		tempo = ft_strjoin_free(tempo, argv[1]);
+	spl = ft_split(tempo, ' ');
+	if (ft_start_checker(spl) == 1)
 		ft_cutting(spl);
 	ft_free_spl_tmp(spl, tempo);
 	return (1);

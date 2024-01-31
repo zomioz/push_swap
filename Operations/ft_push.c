@@ -6,7 +6,7 @@
 /*   By: pirulenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 16:03:49 by pirulenc          #+#    #+#             */
-/*   Updated: 2024/01/06 16:17:44 by pirulenc         ###   ########.fr       */
+/*   Updated: 2024/01/31 05:31:18 by pirulenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_push_a(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *current;
+	t_stack	*current;
 
 	if (*stack_b)
 	{
@@ -24,6 +24,7 @@ void	ft_push_a(t_stack **stack_a, t_stack **stack_b)
 	}
 	ft_printf("pa\n");
 }
+
 void	ft_push_b(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*current;
